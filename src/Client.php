@@ -211,7 +211,7 @@ class Client
         if ($cast !== null) {
             $builder->cast($cast);
         }
-        if (!empty($filename)) {
+        if (!empty($category)) {
             $builder->category($category);
         }
         if (!empty($filename)) {
