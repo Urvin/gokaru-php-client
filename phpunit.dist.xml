@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="./vendor/autoload.php"
+         colors="true"
+         stopOnFailure="true"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd">
+    <coverage>
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">./src/Exception</directory>
+            <file>./src/Exception/DomainException.php</file>
+            <file>./src/Signature/Generator.php</file>
+            <file>./src/Cast.php</file>
+            <file>./src/SourceType.php</file>
+        </exclude>
+    </coverage>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+    </php>
+    <testsuite name="Gokaru">
+        <directory>./tests/</directory>
+    </testsuite>
+</phpunit>

@@ -1,0 +1,37 @@
+{
+    "name": "urvin/gokaru-php-client",
+    "description": "A Gokaru storage & thumbnail server PHP client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuriy Gorbachev",
+            "email": "yuriy@gorbachev.rocks"
+        }
+    ],
+    "keywords": [
+        "thumbnail",
+        "gokaru"
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "lastguest/murmurhash": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Urvin\\Gokaru\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Urvin\\Gokaru\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "XDEBUG_MODE=coverage php vendor/bin/phpunit --configuration ./phpunit.dist.xml --coverage-html=coverage"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
