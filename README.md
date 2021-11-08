@@ -1,5 +1,11 @@
 # Gokaru php client
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Coverage Status][ico-coverage]][link-coverage]
+[![Quality Score][ico-code-quality-scrutinizer]][link-code-quality-scrutinizer]
+
+
 PHP API client for [Gokaru][gokaru] storage & image thumbnail server.
 
 ## Requirements
@@ -66,3 +72,13 @@ $gokaru->delete(
 Yuriy Gorbachev <yuriy@gorbachev.rocks>
 
 [gokaru]:<https://github.com/Urvin/gokaru>
+
+[ico-version]: https://img.shields.io/badge/packagist-dev-yellow.svg
+[ico-coverage]: https://scrutinizer-ci.com/g/Urvin/gokaru-php-client/badges/coverage.png?b=master
+[ico-code-quality-scrutinizer]: https://scrutinizer-ci.com/g/Urvin/gokaru-php-client/badges/quality-score.png?b=master
+[ico-downloads]: https://img.shields.io/packagist/dt/urvin/gokaru-php-client.svg
+
+[link-packagist]: https://packagist.org/packages/urvin/phikaru
+[link-coverage]: https://scrutinizer-ci.com/g/Urvin/gokaru-php-client/?branch=master
+[link-code-quality-scrutinizer]: https://scrutinizer-ci.com/g/Urvin/gokaru-php-client/?branch=master
+[link-downloads]: https://packagist.org/packages/urvin/phikaru
