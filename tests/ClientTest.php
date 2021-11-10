@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 use Urvin\Gokaru\Exception\DomainException;
 use Urvin\Gokaru\Exception\InvalidArgumentException;
 use Urvin\Gokaru\Exception\RuntimeException;
+use Urvin\Gokaru\Exception\SourceErrorException;
 use Urvin\Gokaru\Signature\Generator;
 use Urvin\Gokaru\Signature\Md5Generator;
 use Urvin\Gokaru\Signature\MurMurGenerator;
@@ -190,14 +191,14 @@ class ClientTest extends TestCase
 
     public function testUploadFailsWithoutAFile()
     {
-        $this->expectException(RuntimeException::class);
+        $this->expectException(SourceErrorException::class);
         $client = $this->getDefaultClient();
         $client->upload('/any/file/that/doesnt/exist.fail', SourceType::SOURCE_TYPE_FILE, 'documents', 'secret.txt');
     }
 
     public function testUploadFailsWithUnreadableFile()
     {
-        $this->expectException(RuntimeException::class);
+        $this->expectException(SourceErrorException::class);
         $client = $this->getDefaultClient();
         $filename = realpath(__DIR__ . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'file_unreadable.txt');
         $client->upload($filename, SourceType::SOURCE_TYPE_FILE, 'documents', 'secret.txt');
