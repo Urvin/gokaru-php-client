@@ -73,7 +73,7 @@ Yuriy Gorbachev <yuriy@gorbachev.rocks>
 
 [gokaru]:<https://github.com/Urvin/gokaru>
 
-[ico-version]: https://img.shields.io/badge/packagist-1.0.1-yellow.svg
+[ico-version]: https://img.shields.io/badge/packagist-1.0.2-yellow.svg
 [ico-coverage]: https://scrutinizer-ci.com/g/Urvin/gokaru-php-client/badges/coverage.png?b=master
 [ico-code-quality-scrutinizer]: https://scrutinizer-ci.com/g/Urvin/gokaru-php-client/badges/quality-score.png?b=master
 [ico-downloads]: https://img.shields.io/packagist/dt/urvin/gokaru-php-client.svg

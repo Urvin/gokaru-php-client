@@ -113,10 +113,14 @@ class Client
         }
         $this->validateCredentials($type, $category, $filename);
 
-        if (!file_exists($sourceFilename)) {
-            throw new Exception\RuntimeException('Source file does not exist');
-        }
-        $fileHandler = @fopen($sourceFilename, 'rb');
+        $streamContext = stream_context_create([
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+            ]
+        ]);
+        $fileHandler = @fopen($sourceFilename, 'rb', false, $streamContext);
+
         if ($fileHandler === false) {
             throw new Exception\RuntimeException('Source file is not readable');
         }
