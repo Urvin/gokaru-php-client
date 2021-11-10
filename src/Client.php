@@ -122,7 +122,7 @@ class Client
         $fileHandler = @fopen($sourceFilename, 'rb', false, $streamContext);
 
         if ($fileHandler === false) {
-            throw new Exception\RuntimeException('Source file is not readable');
+            throw new Exception\SourceErrorException('Source file is not readable');
         }
         try {
             $this->getHttpClient()->put(
